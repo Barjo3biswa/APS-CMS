@@ -41,7 +41,7 @@ class ContentController extends Controller
         $content = Content::with('menu','sub_menu','sub_category')->where('menu_id',$menu_id)->where('submenu_id',$submenu_id)->first();
         $menu = Menu::where('id',$menu_id)->first();
         // dd($menu->sub_menu);
-        return view('content.page',compact('content','menu'));
+        return view('content.page',compact('content','menu', 'submenu_id'));
     }
 
 
@@ -136,6 +136,6 @@ class ContentController extends Controller
                             ->first();
                             // dd($important_links);
         return view("content.event-subpage",compact('important_links'));
-        
+
     }
 }
