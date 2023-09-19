@@ -48,7 +48,7 @@
                         </ol>
                     </nav>
                 </div>
-                <img src="{{asset($content->banner_image)}}" alt="Banner Image">
+                <img src="{{asset($content->banner_image??"new-images/slider3.jpg")}}" alt="Banner Image">
             </div>
         </div>
     </div>
