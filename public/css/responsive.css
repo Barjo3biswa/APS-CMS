@@ -1,0 +1,254 @@
+/* Mobile Responsive Start*/
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center!important;
+  }
+}
+@media only screen and (max-width: 486px) {
+    .counter-content {padding-top: 5px;}
+    .showcase {margin-top:2rem!important}
+    .header-section {
+        padding: 0 12px 0px 0;
+        background-color: #fff;
+        /* position: fixed;
+        width: 100%;
+        z-index: 1000; */
+    }
+    .main-menu {
+        margin-top: 5.4rem;
+    }
+    .blog-item .blog-thumb {
+        height: 66px !important;
+        width: 20% !important;
+    }
+    .jist_news_events .blog-item .blog-content {
+        padding-left: 92px;
+    }
+    .nav-switch .fa {margin-top:16px} 
+    .mobile-notice-padding {padding: 0 21px;}
+    .hs-item-2 {background-position: initial;}
+    .blog-item .blog-content h4 {font-size: 14px;}
+    .content_corner h4 {font-size: 14px;}
+    .home.main-menu{margin-top: 6rem;}
+    .blog-content h6 {font-size: 14px;}
+    .g20-img img {width:100%}
+    .bg_vision {margin-top:1rem}
+    .member .member-pic {margin-bottom:0}
+    .staff_container .staff-box {flex-basis: 100%;min-height: 106px;}
+    .board-governor-chairperson {
+        flex-basis: 100%;
+    }
+    .principal-flex {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .principal-title h3 {line-height: 20px;font-size: 12px;}
+    .principal-title h4 {color: #fff;line-height: 20px;font-size: 12px;}
+    .principal-contact {
+        margin-top: 1rem;
+    }
+    .principal-contact span img {width: 15px;}
+    .principal-header{background-size: cover!important;height: 210px!important;}
+    .principal-right-div {display:none}
+    .principal-profile{display:block}
+    .principal-title {display: flex;width: 100%;justify-content: space-between;padding: 6px;}
+    .section-title2 {margin-bottom: 20px!important;}
+    /* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-size: 22px;} */
+    .footer-widget .fw-title {font-size: 14px;}
+    /* .site-logo {max-width: 280px;} */
+    .staff-box h6 {font-size: 12px;}
+    .board-governor-chairperson h4 , .staff-container-governer h4, .staff_container h4 {
+        font-size: 14px;
+    }
+    .site-breadcrumb {height: 200px;margin-top: 0;}
+    .staff_container .staff-box {
+        flex-basis: 100%;
+    }
+    .inner-page-heading {
+        font-size: 14px;
+    }
+    .section-title2 h3{font-size: 16px;}
+    .card-body h6 {font-size: 18px;}
+    .mobile-home {display:block}
+    .header-section {padding: 14px 0;}
+    .department-title img {
+        width: 60px;
+        height: 60px;
+    }
+    .gotohome-btn-container:nth-child(2) {display:none}
+    .department-title h2 {
+        position: relative;
+        top: 4px;
+        font-size: 18px;
+        line-height: 34px;
+        margin-bottom: 0;
+    }
+    .department-title h6 {
+        margin-left: 6.4em;
+        font-size: 11px;
+    }
+    .department-title{width: 100%;}
+    .department-home .hero-slider {height: 220px!important;}
+    .department-home .main-menu {margin-top: 6rem;}
+    .department-home.counter-section {margin-top: 20rem;}
+    .card-container {width:100%;margin-bottom: 26px;}
+    .card-container h5 {font-size: 16px;}
+    .card-container h6 {font-size: 14px;}
+    .hod h5 {font-size:18px}
+    .section-title h3 {font-size:16px}
+    .principal_div_section h6 {font-size:16px}
+    .main-menu .mobile-home {display: block;}
+    .ul_list li {text-align: justify;}
+    .spad {padding-top: 34px;padding-bottom: 34px;}
+    .staff-box h5 {font-size: 14px;}
+    .syllabus-div {flex-basis: 100%;}
+    .syllabus-div h6 {font-size: 14px;}
+    .navbar-nav {background-color: #344986;margin-top: 1rem;}
+    .owl-carousel .owl-stage-outer {
+        height: 230px !important;
+    }
+    .site-breadcrumb img {object-fit: fill!important;}
+    .phy-scholars-div {flex-direction: column;}
+    .admission-h6 {font-size:14px;}
+    .ul_list_admission li {padding: 8px 0px 3px 35px;}
+    .stepper-wrapper {font-size: 8px;}
+    .grievance-cell {flex-wrap: wrap;}
+    .staff_container-admission .staff-box {
+        flex-basis: 100%;
+        min-height: 106px;
+    }
+    .grievance-about {width:100%}
+    #contact {width: 100%;}
+    .mobile-toggle-btn {justify-content: flex-end!important;}
+    .navbar-toggler-icon .fa {color: #fff;}
+    .navbar-toggler-icon {background-color: #f6783a;border-radius: 4px;}
+    .notice_heading {font-size: 16px;}
+    .mobile-h3-size span, h3 {font-size: 16px;margin-bottom: 1.5rem;}
+    .govt_logo {
+        display: inline-block;
+        max-width: 57px;height: 60px;
+      }
+      .jist-title img {
+        width: 62px;
+        height: 60px;
+      }
+      .jist-title div h2 {
+        font-size: 16px;
+        line-height: 17px;
+      }
+      .jist-title div h3{font-weight: 600;font-size: 14px;margin-bottom:0!important}
+      .main-logo-container {width:100%}
+}
+@media only screen and (min-width: 487px) and (max-width:766px){
+    .counter-content {padding-top: 5px;}
+    .showcase {margin-top:1rem}
+    .header-section {
+        padding: 0 12px 0px 0;
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    .main-menu {
+        margin-top: 4rem;
+    }
+    .g20-img img {width:100%}
+    .bg_vision {margin-top:1rem}
+    .member .member-pic {margin-bottom:0}
+    .staff_container .staff-box {flex-basis: 100%;}
+    .board-governor-chairperson {
+        flex-basis: 100%;
+    }
+    .principal-flex {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .principal-title h3 {line-height: 20px;font-size: 12px;}
+    .principal-title h4 {color: #fff;line-height: 20px;font-size: 12px;}
+    .principal-contact {
+        margin-top: 1rem;
+    }
+    .principal-contact span img {width: 15px;}
+    .principal-header{background-size: cover!important;height: 210px!important;}
+    .principal-right-div {display:none}
+    .principal-profile{display:block}
+    .principal-title {display: flex;width: 100%;justify-content: space-between;padding: 4px;}
+    .section-title2 {margin-bottom: 20px!important;}
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-size: 22px;}
+    .footer-widget .fw-title {font-size: 14px;}
+    .site-logo {max-width: 326px;}
+    .principal-flex {margin-top: 5rem;}
+    .mobile-home {display:block}
+    .navbar-nav {background-color: #344986;margin-top: 1rem;}
+    .site-breadcrumb img {object-fit: fill!important;}
+    .phy-scholars-div {flex-direction: column;}
+    .mobile-toggle-btn {justify-content: flex-end!important;}
+    .navbar-toggler-icon .fa {color: #fff;}
+    .navbar-toggler-icon {background-color: #f6783a;border-radius: 4px;}
+    .mobile-h3-size span, h3 {font-size: 16px;margin-bottom: 1.5rem;}
+    .govt_logo {
+        display: inline-block;
+        max-width: 57px;height: 60px;
+      }
+      .jist-title img {
+        width: 62px;
+        height: 60px;
+      }
+      .jist-title div h2 {
+        font-size: 16px;
+        line-height: 17px;
+      }
+      .jist-title div h3{font-weight: 600;font-size: 14px;margin-bottom:0!important}
+      .main-logo-container {width:100%}
+}
+@media only screen and (min-width: 766px) and (max-width:900px){
+.container, .container-sm {
+    max-width: 730px;
+  }
+  .main-menu li a {padding: 26px 8px;font-size: 9px;}
+  .site-logo {max-width: 214px;}
+  .header-info .hf-item {
+    display: inline-block;
+    margin-left: 36px;}
+  .header-info .hf-item p {top: 4px;}
+  .principal-header{background-size: cover!important;height: 328px!important;}
+  .principal-flex {gap: 20px;}
+  .principal-right-div {
+    height: 275px;
+  }
+
+}
+@media only screen and (min-width: 901px) and (max-width:1180px){
+    .container, .container-sm {
+        max-width: 862px;
+    }
+    .site-logo {max-width: 330px;}
+    .main-menu li a {padding: 25px 6px;font-size: 12px;}
+    .principal-header {background-size: cover!important;height: 340px!important;}
+    .mobile-home {display:none}
+}
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    min-width: 180px;
+    top: 58px;
+    left: -1px;
+    }
+    .mobile-home {display:none}
+    .container, .container-lg, .container-md, .container-sm {
+        /* max-width:960px; */
+        max-width: 1118px!important;
+      }
+      .dept_card_container .card {flex-basis: 23.6%;}
+}
+@media only screen and (min-width: 1150px) and (max-width:1195px){
+    .principal-right-div {height: 254px;}
+    .mobile-home {display:none}
+}
+@media only screen and (min-width: 1195px){
+    .principal-right-div {height: 254px;}
+    .mobile-home {display:none}
+    .dept_card_container .card {flex-basis: 23.6%;}
+}
+
+/* Mobile Responsive End */
