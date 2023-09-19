@@ -48,7 +48,7 @@
                         </ol>
                     </nav>
                 </div>
-
+                {{-- test commit --}}
                 <img src="{{asset($content->banner_image??"new-images/slider3.jpg")}}" alt="Banner Image">
             </div>
         </div>
