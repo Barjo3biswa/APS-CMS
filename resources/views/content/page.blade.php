@@ -1,9 +1,11 @@
 @extends('layout.app')
 @section('content')
     @php
-        $gallery = App\Models\Gallery::whereRaw('FIND_IN_SET(?, display_in)', [$submenu_id])->orderby('id','DESC')->get();
+        $gallery = App\Models\Gallery::whereRaw('FIND_IN_SET(?, display_in)', [$submenu_id])
+            ->orderby('id', 'DESC')
+            ->get();
     @endphp
-    <div class="page-header1 py-0 mb-0 wow fadeIn" data-wow-delay="0.1s"
+    <div class="page-header1 py-0 mb-0 row fadeIn" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn; position: relative;">
         <div class="page-header-text position-relative text-center py-0">
             <div class="image-container" style="position: relative;">
@@ -41,8 +43,8 @@
             <div class="row g-5">
                 @if ($content != null)
                     <div class="col-lg-{{ $content->is_full_page == 0 ? 9 : 12 }} wow fadeInUp" data-wow-delay="0.5s">
-                    @else
-                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                @else
+                    <div class="col-lg-12 row fadeInUp" data-wow-delay="0.5s">
                 @endif
                 <div class="h-100">
                     <div class="title-heading-icon ps-0 mb-5">
@@ -63,7 +65,7 @@
                                 PAGE UNDER CONSTRUCTION </p>
                         @endif
                     @endif
-                    <div class="col-md-12">
+                    <div class="row">
                         @foreach ($gallery as $gal)
                             <div class="col-md-3">
                                 <img src="{{ asset($gal->file) }}" alt="" width="100%" height="100%">

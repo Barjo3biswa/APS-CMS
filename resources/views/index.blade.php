@@ -40,11 +40,11 @@
                         ->get();
                 @endphp
                 <div class="bar">
+                    <span class="bar_content">
                     @foreach ($imp_updates as $im_up)
-                        <span class="bar_content">
-                            <span class="impt-update-span">{{ $im_up->title }}</span> {{ $im_up->description }}
-                        </span>
+                        <span class="impt-update-span">{{ $im_up->title }}</span> {{ $im_up->description }}
                     @endforeach
+                   </span>
                 </div>
             </div>
         </div>
@@ -208,7 +208,7 @@
                         @foreach ($important_links as $link)
                             <div class="col-sm-3 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center mb-0 impt-div">
-                                    
+
                                     <img src="{{asset('icons/calendar.png')}}" alt="" class="flex-shrink-0 me-3">
                                     <a href="{{ route('menu.event-sub-load', Crypt::encrypt($link->id)) }}">
                                     <h6 class="mb-0">{{ $link->description }}</h6>
