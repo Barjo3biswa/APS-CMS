@@ -210,7 +210,16 @@
                                 <div class="d-flex align-items-center mb-0 impt-div">
 
                                     <img src="{{asset('icons/calendar.png')}}" alt="" class="flex-shrink-0 me-3">
+
+                                    @if ($link->news_type==1)
+                                    <a href="{{asset($link->pdf_file)}}" target="_blank">
+                                    @elseif ($link->news_type==2)
+                                    <a href="{{asset($link->url)}}" target="_blank">
+                                    @elseif ($link->news_type==3)
                                     <a href="{{ route('menu.event-sub-load', Crypt::encrypt($link->id)) }}">
+                                    @endif
+
+                                    {{-- <a href="{{ route('menu.event-sub-load', Crypt::encrypt($link->id)) }}"> --}}
                                     <h6 class="mb-0">{{ $link->description }}</h6>
                                     </a>
                                 </div>
