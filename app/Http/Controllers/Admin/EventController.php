@@ -169,9 +169,9 @@ class EventController extends Controller
                     $name = time() . '.' . $file->getClientOriginalExtension();
                     $finfo = new \finfo(FILEINFO_MIME_TYPE);
                     $mime_type = $finfo->file($request->file('file'));
-                    if (substr_count($request->file('file'), '.') > 1) {
-                        return redirect()->back()->with('error', 'Doube dot in filename');
-                    }
+                    // if (substr_count($request->file('file'), '.') > 1) {
+                    //     return redirect()->back()->with('error', 'Doube dot in filename');
+                    // }
                     if ($mime_type != "application/pdf" && $mime_type != "application/vnd.ms-excel" && $mime_type != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" && $mime_type != "application/zip" && $mime_type != "application/vnd.rar") {
                         return redirect()->back()->with('error', 'File type not allowed');
                     }
