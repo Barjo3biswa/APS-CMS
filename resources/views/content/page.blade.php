@@ -44,7 +44,7 @@
                 @if ($content != null)
                     <div class="col-lg-{{ $content->is_full_page == 0 ? 9 : 12 }} wow fadeInUp" data-wow-delay="0.5s">
                 @else
-                    <div class="col-lg-12 row fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-lg-12 fadeInUp" data-wow-delay="0.5s">
                 @endif
                 <div class="h-100">
                     <div class="title-heading-icon ps-0 mb-5">
