@@ -42,7 +42,19 @@
                 <div class="bar">
                     <span class="bar_content">
                     @foreach ($imp_updates as $im_up)
-                        <span class="impt-update-span">{{ $im_up->title }}</span> {{ $im_up->description }}
+                        @if ($im_up->news_type==1)
+                        <a href="{{asset($im_up->pdf_file)}}" target="_blank">
+                            <span class="impt-update-span">{{ $im_up->description}}</span>
+                        </a>
+                        @elseif ($im_up->news_type==2)
+                        <a href="{{asset($im_up->url)}}" target="_blank">
+                            <span class="impt-update-span">{{ $im_up->description}}</span>
+                        </a>
+                        @elseif ($im_up->news_type==3)
+                        <a href="#">
+                            <span class="impt-update-span">{{ $im_up->description}}</span>
+                        </a>
+                        @endif
                     @endforeach
                    </span>
                 </div>
