@@ -169,10 +169,10 @@
                                     <img src="{{ asset($data->file) }}" alt="" />
                                     <div class="gallery-item-caption">
                                         <!--<div>-->
-                                        <h2>ALBUM 1</h2>
+                                        {{-- <h2>ALBUM 1</h2>
                                         <p>APS Narangi</p>
                                         <!--</div>-->
-                                        <a class="vimeo-popup" href="#"></a>
+                                        <a class="vimeo-popup" href="#"></a> --}}
                                     </div>
                                 </div>
                             @empty
