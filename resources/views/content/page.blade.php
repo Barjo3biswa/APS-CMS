@@ -68,8 +68,10 @@
                     @endif
                     <div class="row">
                         @foreach ($gallery as $gal)
-                            <div class="col-md-3">
-                                <img src="{{ asset($gal->file) }}" alt="" width="100%" height="100%">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                <div class="img-wrapper">
+                                    <img src="{{ asset($gal->file) }}" alt="" width="100%" height="100%">
+                                </div>
                             </div>
                         @endforeach
                     </div>
