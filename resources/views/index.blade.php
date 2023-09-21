@@ -439,7 +439,7 @@
     </div>
 @endsection
 @section('js')
-<script>
+{{-- <script>
     const barContent = document.querySelector('.bar_content');
     barContent.addEventListener('mouseover', () => {
         barContent.classList.add('paused');
@@ -449,7 +449,7 @@
         barContent.classList.remove('paused');
     });
 
-</script>
+</script> --}}
 @endsection
 
 
