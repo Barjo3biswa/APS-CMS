@@ -43,6 +43,11 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Display in Sports</label>
+                                <input type="checkbox" style="margin-left:2rem;" name="display_in_home" value="1">
+                            </div>
+
                             @foreach ($another_pages as $pag)
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Display in {{$pag->name}}</label>

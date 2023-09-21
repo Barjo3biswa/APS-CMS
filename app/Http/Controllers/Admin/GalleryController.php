@@ -41,9 +41,9 @@ class GalleryController extends Controller
             $finfo = new \finfo(FILEINFO_MIME_TYPE);
             $mime_type = $finfo->file($request->file('file'));
 
-            if (substr_count($request->file('file'), '.') > 1) {
-                return redirect()->back()->with('error', 'Doube dot in filename');
-            }
+            // if (substr_count($request->file('file'), '.') > 1) {
+            //     return redirect()->back()->with('error', 'Doube dot in filename');
+            // }
             if ($mime_type != "image/png" && $mime_type != "image/jpeg") {
                 return redirect()->back()->with('error', 'File type not allowed');
             }
@@ -66,11 +66,11 @@ class GalleryController extends Controller
                     'display_in' => $display_in_ids,
                 ]);
             }
-            // if ($request->display_in_home) {
-            //     $slider->update([
-            //         'display_in_sports' => $request->display_in_sports,
-            //     ]);
-            // }
+            if ($request->display_in_home) {
+                $slider->update([
+                    'display_in_home' => $request->display_in_home,
+                ]);
+            }
             // if ($request->display_in_home) {
             //     $slider->update([
             //         'display_in_co_cur' => $request->display_in_cur,
