@@ -438,3 +438,18 @@
         </div>
     </div>
 @endsection
+@section('js')
+<script>
+    const barContent = document.querySelector('.bar_content');
+    barContent.addEventListener('mouseover', () => {
+        barContent.classList.add('paused');
+    });
+
+    barContent.addEventListener('mouseout', () => {
+        barContent.classList.remove('paused');
+    });
+
+</script>
+@endsection
+
+

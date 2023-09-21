@@ -947,6 +947,9 @@ thead, tbody, tfoot, tr, td, th {
     white-space: nowrap;
     margin-right: 44px;
   }
+  .bar_content.paused {
+    animation-play-state: paused;
+    }
 
   @keyframes move {
     to { transform: translateX(-100%); }

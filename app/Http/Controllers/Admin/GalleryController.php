@@ -14,7 +14,8 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::get();
         // dD($sliders);
-        return view('admin.gallery.create', compact('gallery'));
+        $another_pages = SubMenu::whereIn('menu_id',[5,6])->get();
+        return view('admin.gallery.create', compact('gallery','another_pages'));
     }
 
     /**
@@ -25,17 +26,20 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+
         $request->validate([
             'file' => 'required | image | mimes:jpeg,png,jpg | max:5000',
             'file_name' =>'required',
         ]);
+
+        // dd("ok");
         DB::beginTransaction();
         try {
 
             $file = $request->file('file');
             $finfo = new \finfo(FILEINFO_MIME_TYPE);
             $mime_type = $finfo->file($request->file('file'));
+
             if (substr_count($request->file('file'), '.') > 1) {
                 return redirect()->back()->with('error', 'Doube dot in filename');
             }
@@ -55,26 +59,27 @@ class GalleryController extends Controller
                 'filename' => $request->file_name,
                 'file' => $file_path,
             ]);
-            if ($request->display_in_home) {
+            if ($request->display_in) {
+                $display_in_ids = implode(',', $request->input('display_in'));
                 $slider->update([
-                    'display_in_home' => $request->display_in_home,
+                    'display_in' => $display_in_ids,
                 ]);
             }
-            if ($request->display_in_home) {
-                $slider->update([
-                    'display_in_sports' => $request->display_in_sports,
-                ]);
-            }
-            if ($request->display_in_home) {
-                $slider->update([
-                    'display_in_co_cur' => $request->display_in_cur,
-                ]);
-            }
+            // if ($request->display_in_home) {
+            //     $slider->update([
+            //         'display_in_sports' => $request->display_in_sports,
+            //     ]);
+            // }
+            // if ($request->display_in_home) {
+            //     $slider->update([
+            //         'display_in_co_cur' => $request->display_in_cur,
+            //     ]);
+            // }
             DB::commit();
             return redirect()->back()->with('success', 'Gallery Image Added');
         } catch (\Throwable $th) {
             //throw $th;
-            // dd($th);
+            dd($th);
             DB::rollBack();
             return redirect()->back()->with('error', 'Something went wrong');
         }

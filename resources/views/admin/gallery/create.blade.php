@@ -43,10 +43,13 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Display in Home</label>
-                                <input type="checkbox" style="margin-left:2rem;" name="display_in_home" value="1">
-                            </div>
+                            @foreach ($another_pages as $pag)
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Display in {{$pag->name}}</label>
+                                    <input type="checkbox" style="margin-left:2rem;" name="display_in[]" value="{{$pag->id}}">
+                                </div>
+                            @endforeach
+{{--
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Display in Sports</label>
@@ -56,7 +59,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Display in co-curricular</label>
                                 <input type="checkbox" style="margin-left:2rem;" name="display_in_cur" value="3">
-                            </div>
+                            </div> --}}
 
                         </div>
                         <div class="card-footer">

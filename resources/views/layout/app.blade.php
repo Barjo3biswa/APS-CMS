@@ -55,7 +55,7 @@
             $('.modal').modal('show');
         });
     </script>
-
+    @yield('js')
 
 </body>
 
