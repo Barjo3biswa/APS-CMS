@@ -44,7 +44,7 @@
                     <marquee class="marquee"
                         behavior="scroll"
                         direction="left"
-                        scrolldelay="0.5"
+                        scrolldelay="5"
                         onmouseover="this.stop();"
                         onmouseout="this.start();"
                         >
