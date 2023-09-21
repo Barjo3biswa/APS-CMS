@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Display in Sports</label>
+                                <label for="exampleInputEmail1">Display in Home</label>
                                 <input type="checkbox" style="margin-left:2rem;" name="display_in_home" value="1">
                             </div>
 

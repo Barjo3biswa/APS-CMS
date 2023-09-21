@@ -3,6 +3,7 @@
     @php
         $gallery = App\Models\Gallery::whereRaw('FIND_IN_SET(?, display_in)', [$submenu_id])
             ->orderby('id', 'DESC')
+            ->where('status',1)->orderby('id','desc')
             ->get();
     @endphp
     <div class="page-header1 py-0 mb-0 row fadeIn" data-wow-delay="0.1s"
