@@ -207,11 +207,11 @@
                         </div><!-- End row -->
                     </div><!-- End image gallery -->
                 </section>
-
+                {{ $gallery->appends(request()->all())->links() }}
             </div>
 
         </div>
     </div>
-    {{ $gallery->appends(request()->all())->links() }}
+
     {{-- {{ $gallery->links() }} --}}
 @endsection
