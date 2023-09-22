@@ -81,6 +81,7 @@ body {
 .navbar.sticky-top {
     top: -100px;
     transition: .5s;
+    z-index: 10;
 }
 
 .navbar .navbar-nav .nav-link {
