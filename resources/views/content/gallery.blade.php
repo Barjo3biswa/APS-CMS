@@ -124,46 +124,33 @@
         }
     /* </style>
 
-<style> */
-
-    .pagination {
-        display: inline-block;
-        padding-left: 0;
-        margin: 20px 0;
-        border-radius: 4px;
-    }
-
-    .pagination li {
-        display: inline;
-    }
-
-    .pagination li a {
-        color: #007bff;
+<style>
+    /* Style for previous pagination link */
+    .relative.inline-flex.items-center.px-4.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.leading-5.rounded-md {
+        /* Add your styling here */
+        color: #333;
         background-color: #fff;
-        border: 1px solid #ddd;
-        padding: 6px 12px;
-        margin-right: 5px;
         border-radius: 4px;
-        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
     }
 
-    .pagination li a:hover {
-        background-color: #f5f5f5;
+    .relative.inline-flex.items-center.px-4.py-2.ml-3.text-sm.font-medium.text-gray-700.bg-white.border.border-gray-300.leading-5.rounded-md.hover:text-gray-500.focus:outline-none.focus:ring.ring-gray-300.focus:border-blue-300.active:bg-gray-100.active:text-gray-700.transition.ease-in-out.duration-150 {
+        /* Add your styling here */
+        color: #333;
+        background-color: #fff;
+        border-radius: 4px;
+        transition: background-color 0.2s, color 0.2s;
     }
 
-    .pagination .active a {
+    /* Hover and active states for links */
+    .relative.inline-flex.items-center.px-4.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.leading-5.rounded-md:hover,
+    .relative.inline-flex.items-center.px-4.py-2.ml-3.text-sm.font-medium.text-gray-700.bg-white.border.border-gray-300.leading-5.rounded-md.hover:text-gray-500.focus:outline-none.focus:ring.ring-gray-300.focus:border-blue-300.active:bg-gray-100.active:text-gray-700.transition.ease-in-out.duration-150 {
         background-color: #007bff;
         color: #fff;
-        border: 1px solid #007bff;
-    }
-
-    .pagination .disabled a {
-        color: #6c757d;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        cursor: not-allowed;
+        border-color: #007bff;
     }
 </style>
+
 @endsection
 @section('content')
     {{-- <div class="site-breadcrumb">
