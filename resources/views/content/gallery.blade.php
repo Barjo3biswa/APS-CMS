@@ -122,7 +122,48 @@
             opacity: 1;
             transform: translate3d(0, 0, 0);
         }
-    </style>
+    /* </style>
+
+<style> */
+    /* Style for pagination links */
+    .pagination {
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    .pagination li {
+        display: inline;
+    }
+
+    .pagination li a {
+        color: #007bff;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 6px 12px;
+        margin-right: 5px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    .pagination li a:hover {
+        background-color: #f5f5f5;
+    }
+
+    .pagination .active a {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+    }
+
+    .pagination .disabled a {
+        color: #6c757d;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        cursor: not-allowed;
+    }
+</style>
 @endsection
 @section('content')
     {{-- <div class="site-breadcrumb">
