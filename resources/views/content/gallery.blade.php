@@ -125,7 +125,7 @@
     /* </style>
 
 <style> */
-    /* Style for pagination links */
+
     .pagination {
         display: inline-block;
         padding-left: 0;
