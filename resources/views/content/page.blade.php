@@ -97,7 +97,7 @@
                             </div>
                             <ul class="sidebar-ul">
                                 @foreach ($menu->sub_menu as $sub)
-                                    <li><a href="{{ route('menu.content', [Crypt::encrypt($menu->id), Crypt::encrypt($sub->id)]) }}"
+                                    <li><a href="{{ route('menu.content', [$menues->slug,$sub->slug]) }}"
                                             {{-- class="active" --}}>{{ $sub->name }}</a></li>
                                 @endforeach
                             </ul>
