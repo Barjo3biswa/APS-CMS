@@ -65,10 +65,10 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto py-3 py-lg-0">
-        <a href="{{route('index')}}" class="nav-item nav-link active">Home</a>
+        <a href="{{route('index')}}" class="nav-item nav-link {{-- active --}}">Home</a>
         <!-- <a href="about.html" class="nav-item nav-link">About Us</a> -->
         @foreach ($menus as $menues)
-            <div class="nav-item dropdown active">
+            <div class="nav-item dropdown">
                 @if ($menues->sublink == 0)
                     <a class="nav-link" href="#" id="navbarDropdown" role="button">{{$menues->name}}</a>
                 @else
