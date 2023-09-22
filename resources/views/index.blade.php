@@ -435,7 +435,7 @@
                                         <a href="{{ asset($gal->file) }}"><img src="{{ asset($gal->file) }}"
                                                 class="img-responsive"></a>
                                         <div class="img-overlay">
-                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                            {{-- <i class="fa fa-plus-circle" aria-hidden="true"></i> --}}
                                         </div>
                                     </div>
                                 </div>

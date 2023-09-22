@@ -76,7 +76,8 @@
                 @endif
                 <div class="dropdown-menu bg-light1 m-0">
                     @foreach ($menues->sub_menu as $sub_men)
-                        <a href="{{route('menu.content',[Crypt::encrypt($menues->id),Crypt::encrypt($sub_men->id)])}}" class="dropdown-item">{{$sub_men->name}}</a>
+                        {{-- <a href="{{route('menu.content',[Crypt::encrypt($menues->id),Crypt::encrypt($sub_men->id)])}}" class="dropdown-item">{{$sub_men->name}}</a> --}}
+                        <a href="{{route('menu.content',[$menues->slug,$sub_men->slug])}}" class="dropdown-item">{{$sub_men->name}}</a>
                     @endforeach
                 </div>
             </div>

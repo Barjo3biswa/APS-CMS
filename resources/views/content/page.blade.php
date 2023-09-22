@@ -3,7 +3,8 @@
     @php
         $gallery = App\Models\Gallery::whereRaw('FIND_IN_SET(?, display_in)', [$submenu_id])
             ->orderby('id', 'DESC')
-            ->where('status',1)->orderby('id','desc')
+            ->where('status', 1)
+            ->orderby('id', 'desc')
             ->get();
     @endphp
     <div class="page-header1 py-0 mb-0 row fadeIn" data-wow-delay="0.1s"
@@ -44,8 +45,8 @@
             <div class="row g-5">
                 @if ($content != null)
                     <div class="col-lg-{{ $content->is_full_page == 0 ? 9 : 12 }} wow fadeInUp" data-wow-delay="0.5s">
-                @else
-                    <div class="col-lg-12 fadeInUp" data-wow-delay="0.5s">
+                    @else
+                        <div class="col-lg-12 fadeInUp" data-wow-delay="0.5s">
                 @endif
                 <div class="h-100">
                     <div class="title-heading-icon ps-0 mb-5">
@@ -66,43 +67,52 @@
                                 PAGE UNDER CONSTRUCTION </p>
                         @endif
                     @endif
-                    <div class="row">
-                        @foreach ($gallery as $gal)
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                                <div class="img-wrapper">
-                                    <img src="{{ asset($gal->file) }}" alt="" width="100%" height="100%">
-                                </div>
+                    <section id="gallery">
+                        <div id="image-gallery">
+                            <div class="row">
+                                @foreach ($gallery as $gal)
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                        <div class="img-wrapper">
+                                            <a href="{{ asset($gal->file) }}"><img src="{{ asset($gal->file) }}"
+                                                    class="img-responsive"></a>
+                                            {{-- <img src="{{ asset($gal->file) }}" alt="" width="100%" height="100%"> --}}
+                                            <div class="img-overlay">
+                                                {{-- <i class="fa fa-plus-circle" aria-hidden="true"></i> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    </section>
                 </div>
+                @if ($content = null && $content->is_full_page == 0)
+                    <div class="col-md-3 col-sm-12">
+                        <div class="right-sidebar">
+                            <div class="title-sidebar"
+                                style="display: flex;gap:1px;align-items: center;margin-bottom: 1rem;">
+                                <span><img src="./icons/history.png" alt="" width="30"></span>
+                                <h5 class="mb-0">Quick Links</h5>
+                            </div>
+                            <ul class="sidebar-ul">
+                                @foreach ($menu->sub_menu as $sub)
+                                    <li><a href="{{ route('menu.content', [Crypt::encrypt($menu->id), Crypt::encrypt($sub->id)]) }}"
+                                            {{-- class="active" --}}>{{ $sub->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="emagazine">
+                            <h5 class="sub-heading display-7 mt-4 mb-4">Our Magazine <span
+                                    style="color:#fd940c;">"TRIVENI"</span></h5>
+                            <img src="https://image.isu.pub/201202023927-f9ea96f35612bd78d27c48ce309371c3/jpg/page_1.jpg"
+                                alt="" style="width:100%;">
+                            <div class="subscribe-btn" style="position: relative;">
+                                <a href="#" class="btn-shine" target="_blank">Subscribe Now</a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
-            @if ($content = null && $content->is_full_page == 0)
-                <div class="col-md-3 col-sm-12">
-                    <div class="right-sidebar">
-                        <div class="title-sidebar" style="display: flex;gap:1px;align-items: center;margin-bottom: 1rem;">
-                            <span><img src="./icons/history.png" alt="" width="30"></span>
-                            <h5 class="mb-0">Quick Links</h5>
-                        </div>
-                        <ul class="sidebar-ul">
-                            @foreach ($menu->sub_menu as $sub)
-                                <li><a href="{{ route('menu.content', [Crypt::encrypt($menu->id), Crypt::encrypt($sub->id)]) }}"
-                                        {{-- class="active" --}}>{{ $sub->name }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="emagazine">
-                        <h5 class="sub-heading display-7 mt-4 mb-4">Our Magazine <span
-                                style="color:#fd940c;">"TRIVENI"</span></h5>
-                        <img src="https://image.isu.pub/201202023927-f9ea96f35612bd78d27c48ce309371c3/jpg/page_1.jpg"
-                            alt="" style="width:100%;">
-                        <div class="subscribe-btn" style="position: relative;">
-                            <a href="#" class="btn-shine" target="_blank">Subscribe Now</a>
-                        </div>
-                    </div>
-                </div>
-            @endif
         </div>
-    </div>
     </div>
 @endsection

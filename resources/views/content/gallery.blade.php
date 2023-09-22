@@ -159,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="row g-5">
+            {{-- <div class="row g-5">
                 <div class="col-md-12 col-sm-12">
                     <div class="content">
 
@@ -168,11 +168,11 @@
                                 <div class="gallery-item ">
                                     <img src="{{ asset($data->file) }}" alt="" />
                                     <div class="gallery-item-caption">
-                                        <!--<div>-->
-                                        {{-- <h2>ALBUM 1</h2>
+                                        <div>
+                                        <h2>ALBUM 1</h2>
                                         <p>APS Narangi</p>
-                                        <!--</div>-->
-                                        <a class="vimeo-popup" href="#"></a> --}}
+
+                                        <a class="vimeo-popup" href="#"></a>
                                     </div>
                                 </div>
                             @empty
@@ -187,6 +187,27 @@
                     </div>
 
                 </div>
+            </div> --}}
+
+            <div class="row g-4">
+                <section id="gallery">
+                    <div id="image-gallery">
+                        <div class="row">
+                            @foreach ($gallery as $gal)
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                    <div class="img-wrapper">
+                                        <a href="{{ asset($gal->file) }}"><img src="{{ asset($gal->file) }}"
+                                                class="img-responsive"></a>
+                                        <div class="img-overlay">
+                                            {{-- <i class="fa fa-plus-circle" aria-hidden="true"></i> --}}
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div><!-- End row -->
+                    </div><!-- End image gallery -->
+                </section>
+
             </div>
 
         </div>

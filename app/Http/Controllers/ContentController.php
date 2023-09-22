@@ -36,8 +36,10 @@ class ContentController extends Controller
 
     public function getMenuContent($menu_id,$submenu_id)
     {
-        $menu_id = Crypt::decrypt($menu_id);
-        $submenu_id = Crypt::decrypt($submenu_id);
+        // $menu_id = Crypt::decrypt($menu_id);
+        // $submenu_id = Crypt::decrypt($submenu_id);
+        $menu_id = Menu::where('slug',$menu_id)->first()->id;
+        $submenu_id = SubMenu::where('slug',$submenu_id)->first()->id;
         $content = Content::with('menu','sub_menu','sub_category')->where('menu_id',$menu_id)->where('submenu_id',$submenu_id)->first();
         $menu = Menu::where('id',$menu_id)->first();
         // dd($menu->sub_menu);
