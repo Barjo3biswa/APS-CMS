@@ -235,7 +235,8 @@
                         </div><!-- End row -->
                     </div><!-- End image gallery -->
                 </section>
-                {{ $gallery->appends(request()->all())->links() }}
+                {{-- {{ $gallery->appends(request()->all())->links() }} --}}
+        {{$gallery->links('pagination::bootstrap-4')}}
             </div>
 
         </div>
