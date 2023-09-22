@@ -97,7 +97,7 @@
                             </div>
                             <ul class="sidebar-ul">
                                 @foreach ($menu->sub_menu as $sub)
-                                    <li><a href="{{ route('menu.content', [$menues->slug,$sub->slug]) }}"
+                                    <li><a href="{{ route('menu.content', [$menu->slug,$sub->slug]) }}"
                                             {{-- class="active" --}}>{{ $sub->name }}</a></li>
                                 @endforeach
                             </ul>
