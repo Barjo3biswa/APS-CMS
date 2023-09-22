@@ -86,7 +86,7 @@
                         </div>
                     </section>
                 </div>
-                @if ($content = null && $content->is_full_page == 0)
+                @if ($content != null && $content->is_full_page == 0)
                     <div class="col-md-3 col-sm-12">
                         <div class="right-sidebar">
                             <div class="title-sidebar"
