@@ -35,7 +35,7 @@
                 <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(12)) }}">Rules & Regulations</a>
                 <a class="btn btn-link" href="">Transfer Certificate</a>
                 <a class="btn btn-link" href="">Examination & Promotion</a>
-                <a class="btn btn-link" href="{{route('menu.content',[admission,'fee-structure'])}}">Fee Structure</a>
+                <a class="btn btn-link" href="{{route('menu.content',['admission','fee-structure'])}}">Fee Structure</a>
                 <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(10)) }}">Results</a>
                 <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(25)) }}">Career</a>
             </div>
