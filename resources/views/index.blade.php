@@ -102,6 +102,9 @@
                             </h1>
                         </div>
 
+                        {{-- @php
+                            $latest_events = App\Models\Content::where('menu_id',1)->where('submenu_id',1)->first();
+                        @endphp --}}
                         <p style="text-align:justify;">
                             On 15th January 1980 (Army Day), the Chief of the Army Staff made an announcement regarding
                             the establishment of Army Schools throughout the country to impart adequate educational
@@ -112,7 +115,7 @@
                             Udhampur, Bangalore, Dehradun and Ambala. More and more such schools are being raised to the
                             status of Army Schools every year.
                         </p>
-                        <a class="small" href="">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
+                        <a class="small" href="{{route('menu.content',['about-us','Our History'])}}">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
                     </div>
                 </div>
             </div>
@@ -143,11 +146,12 @@
                             <h6 class="text-body display-7 text-uppercase mb-4">Message from the Principal's Desk</h6>
                             <div class="msg-principal">
                                 <div class="msg-para">
-                                    <p style="text-align: justify;">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                        elit. Alias soluta eveniet optio assumenda architecto adipisci corrupti
-                                        provident voluptatum? Recusandae quaerat laboriosam aut est esse harum culpa
-                                        excepturi voluptatibus laborum ex!</p>
-                                    <a class="small" href="">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <p style="text-align: justify;">Education is a shared commitment between dedicated teachers, motivated students and enthusiastic parents with high expectations"</p>
+
+                                        <p>Welcome to the website of Army Public School Narangi.</p>
+
+                                        <p>As the Principal of the school, I feel honored and privileged to be part of an educational institution where every stakeholder is a learner and every day is an opportunity to learn and discover.</p>
+                                    <a class="small" href="{{route('menu.content',['message-desk','message-from-principal'])}}">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                                 <div class="principal-name" style="display: flex;flex-direction: column;align-items: center;">
                                     <div class="principal-img" style="height: 170px;">
