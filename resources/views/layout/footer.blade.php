@@ -18,7 +18,7 @@
                 @endphp
                 @foreach ($menus as $menues)
                     @php
-                        $sub_men=$menus->sub_menu->first();
+                        $sub_men=$menues->sub_menu->first();
                     @endphp
                     <a class="btn btn-link" href="{{route('menu.content',[$menues->slug,$sub_men->slug])}}">{{$menues->name}}</a>
                 @endforeach
