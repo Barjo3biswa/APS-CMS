@@ -115,7 +115,7 @@
                             Udhampur, Bangalore, Dehradun and Ambala. More and more such schools are being raised to the
                             status of Army Schools every year.
                         </p>
-                        <a class="small" href="{{route('menu.content',['about-us','Our History'])}}">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
+                        <a class="small" href="{{route('menu.content',['about-us','our-history'])}}">READ MORE<i class="fa fa-arrow-right ms-3"></i></a>
                     </div>
                 </div>
             </div>
