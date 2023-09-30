@@ -32,13 +32,12 @@
             </div>
             <div class="col-lg-3 col-md-6 mt-0">
                 <h4 class="text-light mb-4">Information</h4>
-                <a class="btn btn-link" href="">Activities</a>
-                <a class="btn btn-link" href="">Rules & Regulations</a>
+                <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(12)) }}">Rules & Regulations</a>
                 <a class="btn btn-link" href="">Transfer Certificate</a>
                 <a class="btn btn-link" href="">Examination & Promotion</a>
-                <a class="btn btn-link" href="">Fee Structure</a>
-                <a class="btn btn-link" href="">Results</a>
-                <a class="btn btn-link" href="">Career</a>
+                <a class="btn btn-link" href="{{route('menu.content',[admission,'fee-structure'])}}">Fee Structure</a>
+                <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(10)) }}">Results</a>
+                <a class="btn btn-link" href="{{ route('menu.event-sub-load', Crypt::encrypt(25)) }}">Career</a>
             </div>
             <div class="col-lg-3 col-md-6 mt-0">
                 <h4 class="text-light mb-4">Address</h4>
