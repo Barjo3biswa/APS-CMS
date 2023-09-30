@@ -17,7 +17,10 @@
                     $menus = App\Models\Menu::where('status', 1)->get();
                 @endphp
                 @foreach ($menus as $menues)
-                <a class="btn btn-link" href="#">{{$menues->name}}</a>
+                    @php
+                        $sub_men=$menus->sub_menu->first();
+                    @endphp
+                    <a class="btn btn-link" href="{{route('menu.content',[$menues->slug,$sub_men->slug])}}">{{$menues->name}}</a>
                 @endforeach
                 {{-- <a class="btn btn-link" href="#">About Us</a>
                 <a class="btn btn-link" href="#">Administration</a>
