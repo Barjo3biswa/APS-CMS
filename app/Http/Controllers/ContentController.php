@@ -128,7 +128,7 @@ class ContentController extends Controller
         }
         // dd($decrypted);
         // $event = Event::where($decrypted['field'],'LIKE', '%'.$decrypted['args'].'%')->get();
-        $event = Event::where('news_type_id','LIKE', '%'.$decrypted.'%')->get();
+        $event = Event::where('news_type_id','LIKE', '%'.$decrypted.'%')->orderBy('date','DESC')->get();
         return view('content.event-page',compact('event'));
     }
 
