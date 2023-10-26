@@ -37,6 +37,7 @@
                 @php
                     $imp_updates = App\Models\Event::where('news_type_id', 'LIKE', '%1%')
                         ->where('status', 1)
+                        ->orderBy('date','DESC')
                         ->get();
                 @endphp
                 <div class="bar">
@@ -176,6 +177,7 @@
                                 @php
                                     $news_updates = App\Models\Event::where('news_type_id', 'LIKE', '%4%')
                                         ->where('status', 1)
+                                        ->orderBy('date','DESC')
                                         ->get();
                                 @endphp
                                 <ul>
@@ -228,6 +230,7 @@
                     @php
                         $important_links = App\Models\Event::where('news_type_id', 'LIKE', '%3%')
                             ->where('status', 1)
+                            ->orderBy('date','DESC')
                             ->get();
                     @endphp
                     <div class="row gy-5 gx-4 important_links">
@@ -366,6 +369,7 @@
             @php
                 $latest_events = App\Models\Event::where('news_type_id', 'LIKE', '%2%')
                     ->where('status', 1)
+                    ->orderBy('date','DESC')
                     ->get();
             @endphp
             <div class="row g-4 justify-content-center aps-events">
