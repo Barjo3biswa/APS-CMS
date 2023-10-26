@@ -125,10 +125,9 @@ class ContentController extends Controller
         } catch (\Exception $e) {
 
         }
+        dd("ok");
         $event = Event::where($decrypted['field'],'LIKE', '%'.$decrypted['args'].'%')->get();
         return view('content.event-page',compact('event'));
-        // dd($list);
-
     }
 
     public function eventSubPage($id){
