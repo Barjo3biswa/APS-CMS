@@ -205,7 +205,10 @@
                                     @endforeach
                                 </ul>
                                 <a class="small"
-                                    href="{{ route('menu.load-more', Crypt::encrypt(['field' => 'news_type_id', 'args' => '4'])) }}">READ
+                                    href="{{ route('menu.load-more', Crypt::encrypt(4)) }}"
+                                    {{-- href="{{ route('menu.load-more', Crypt::encrypt(['field' => 'news_type_id', 'args' => '4'])) }}" --}}
+                                    >
+                                    READ
                                     MORE<i class="fa fa-arrow-right ms-3"></i></a>
                             </div>
                         </div>
@@ -362,7 +365,8 @@
                 </div>
                 <div class="col-lg-6 text-lg-end wow fadeInUp" data-wow-delay="0.3s">
                     <a class="btn btn-primary py-3 px-3"
-                        href="{{ route('menu.load-more', Crypt::encrypt(['field' => 'news_type_id', 'args' => '3'])) }}"
+                        {{-- href="{{ route('menu.load-more', Crypt::encrypt(['field' => 'news_type_id', 'args' => '3'])) }}" --}}
+                        href="{{ route('menu.load-more', Crypt::encrypt(3)) }}"
                         style="border-radius: 50px;padding: 6px 10px !important;">View All Events</a>
                 </div>
             </div>
