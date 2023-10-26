@@ -120,12 +120,13 @@ class ContentController extends Controller
      */
     public function loadMore($id)
     {
+        dd("ok");
         try {
             $decrypted = Crypt::decrypt($id);
         } catch (\Exception $e) {
 
         }
-        dd("ok");
+        // dd("ok");
         $event = Event::where($decrypted['field'],'LIKE', '%'.$decrypted['args'].'%')->get();
         return view('content.event-page',compact('event'));
     }
